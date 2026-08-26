@@ -12,9 +12,17 @@ on:
         - test
         - prod
 
+    artifact-tag:
+     description: choose the artifact tag
+     required: true
+     type: choice
+     options:
+      - 0.0.1
+      - 0.0.2
+
 jobs:
  inputs-demo:   
    runs-on: ubuntu-latest
    steps:
     - name: Calling Input values
-      run: echo "Deployed application in ${{inputs.name}}"
+      run: echo "Deployed application with version ${{inputs.artifact-tag}} in ${{inputs.name}}"
