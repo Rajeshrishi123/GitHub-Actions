@@ -12,7 +12,7 @@ on:
         - test
         - prod
 
-    artifact-tag:
+    artifact_tag:
      description: choose the artifact tag 
      required: true
      type: choice
