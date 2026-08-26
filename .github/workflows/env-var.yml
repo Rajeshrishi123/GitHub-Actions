@@ -6,7 +6,11 @@ env:
 
 jobs:
  env-demo:
+ env:
+  env_name: Test
   runs-on: ubuntu-latest
   steps:
    - name: Env vars calling
-     run: echo "Hello ${{env.env_name}}"
+     run: echo " ${{env.env_name}} env"
+
+     
