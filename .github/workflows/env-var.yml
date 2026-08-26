@@ -6,8 +6,8 @@ env:
 
 jobs:
  env-demo:
- env:
-  env_name: Test
+  env:
+   env_name: Test
   runs-on: ubuntu-latest
   steps:
    - name: Env vars calling
