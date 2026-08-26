@@ -1,0 +1,12 @@
+name: env-demo
+on: workflow_dispatch
+env:
+ env_name: Dev
+  
+
+jobs:
+ env-demo:
+  runs-on: ubuntu-latest
+  steps:
+   - name: Env vars calling
+     run: echo "Hello ${{env.env_name}}"
