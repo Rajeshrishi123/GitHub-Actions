@@ -1,0 +1,19 @@
+name: outputs-job-level
+on: push
+jobs:
+ build:
+  outputs:
+   name: ${{steps.step-1.outputs.version}}
+  runs-on: ubuntu-latest
+  steps:
+   - name: job-level-output workflow
+     id: step-1
+     run: echo "version=0.0.2" >> $GITHUB_OUTPUT
+
+ deploy:
+  needs: build
+  runs-on: ubuntu-latest
+  steps:
+   - name: deploying app
+     run: echo "app is deployed with version ${{needs.build.outputs.name}}"
+     
