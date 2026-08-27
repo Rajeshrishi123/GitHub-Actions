@@ -14,5 +14,5 @@ jobs:
    - name: calling context vars in json format
      run: |
       echo printenv
-      echo ${{toJson(github)}}
+      echo "${{toJson(github)}}"
      
