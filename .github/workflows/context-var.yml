@@ -10,5 +10,9 @@ jobs:
       echo "Repository name is ${{ github.repository }}"
       echo "branch is ${{ github.ref }}"
       echo "User account name is ${{ github.actor }}"
-     
+      
+   - name: calling context vars in json format
+     run: |
+      echo printenv
+      echo ${{toJson(github)}}
      
