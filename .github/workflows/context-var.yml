@@ -8,7 +8,7 @@ jobs:
    - name: calling context variable
      run: |
       echo "Repository name is ${{ github.repository }}"
-      echo "branch is ${ github.ref }}"
+      echo "branch is ${{ github.ref }}"
       echo "User account name is ${{ github.actor }}"
      
      
