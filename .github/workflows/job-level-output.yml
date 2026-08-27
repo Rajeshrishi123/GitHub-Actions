@@ -15,5 +15,5 @@ jobs:
   runs-on: ubuntu-latest
   steps:
    - name: deploying app
-     run: echo "app is deployed with version ${{needs.build.outputs.name}}"
+     run: echo "app is deployed from repo ${{github.repository}} from branch ${{github.ref}} by the user ${{github.actor}}  with version ${{needs.build.outputs.name}}"
      
